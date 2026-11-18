@@ -26,7 +26,18 @@ macOS 菜单栏截图翻译工具：按一下快捷键，框选屏幕上任意�
 - Apple Silicon
 - Xcode 或 Xcode 命令行工具（`xcode-select --install`）
 
-## 编译安装
+## 下载安装
+
+1. 到 [Releases](https://github.com/cracya01/capslate/releases) 下载最新的 `Capslate-*.dmg`，双击打开
+2. 把 `Translator.app` 拖进 `Applications` 文件夹
+3. **首次打开需要手动放行**：app 没有经过苹果公证，直接双击会提示「无法验证开发者」。任选一种方法：
+   - 双击打开一次后，到「系统设置 → 隐私与安全性」，在页面下方点「仍要打开」
+   - 或在终端执行：
+     ```bash
+     xattr -dr com.apple.quarantine /Applications/Translator.app
+     ```
+
+## 从源码编译安装
 
 ```bash
 ./build.sh
